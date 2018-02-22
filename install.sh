@@ -5,7 +5,7 @@ do
     [[ "$file" =~ .+/\.git ]] && continue
     [[ "$file" =~ .+/\.DS_Store ]] && continue
 
-    echo "$file"
+    echo "link $file to $HOME/$(basename $file)"
     ln -s $file $HOME/$(basename $file)
 done
 
