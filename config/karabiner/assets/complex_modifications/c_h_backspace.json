@@ -1,0 +1,40 @@
+{
+  "title": "Vi Edit Mode Styles",
+  "rules": [{
+    "description": "Control + h/j",
+    "manipulators": [
+      {
+        "type": "basic",
+        "from": {
+          "key_code": "h",
+          "modifiers": {
+            "mandatory": [
+              "control"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "delete_or_backspace"
+          }
+        ]
+      },
+      {
+        "type": "basic",
+        "from": {
+          "key_code": "j",
+          "modifiers": {
+            "mandatory": [
+              "control"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "return_or_enter"
+          }
+        ]
+      }
+    ]
+  }]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Vi Style Addon",
+  "rules": [{
+    "description": "Esc by Ctrl + [",
+    "manipulators": [
+      {
+        "type": "basic",
+        "from": {
+          "key_code": "open_bracket",
+          "modifiers": {
+            "mandatory": [
+              "control"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "escape"
+          }
+        ]
+      }
+    ]
+  }]
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Vi Style Addon",
+  "rules": [{
+    "description": "Control with Page Up & Down",
+    "manipulators": [
+      {
+        "type": "basic",
+        "from": {
+          "key_code": "d",
+          "modifiers": {
+            "mandatory": [
+              "control"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "page_down"
+          }
+        ]
+      },
+      {
+        "type": "basic",
+        "from": {
+          "key_code": "u",
+          "modifiers": {
+            "mandatory": [
+              "control"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "page_up"
+          }
+        ]
+      }
+    ]
+  }]
+}
