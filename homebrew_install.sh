@@ -1,15 +1,45 @@
-echo "installing homebrew..."
-command -v brew >/dev/null 2>&1 || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+NoColor='\033[0m'
+Green='\033[0;32m'
+Yellow='\033[0;33m'
+Red='\033[0;31m'
 
-echo "run brew doctor..."
-command -v brew >/dev/null 2>&1 && brew doctor
 
-echo "run brew update..."
-command -v brew >/dev/null 2>&1 && brew update
+function info {
+  echo "${Green}[I] $1${NoColor}"
+}
 
-echo "ok. run brew upgrade..."
+function warn {
+  echo "${Yellow}[W] $1${NoColor}"
+}
 
-brew upgrade
+function install_brew {
+  if [ $# -eq 2 ]; then
+    name=$1
+    command=$2
+  else
+    name=$1
+    command=$1
+  fi
+
+  if command -v $command > /dev/null  2>&1; then
+    info "$name found..."
+  else
+    (warn "$name not found, installing via homebrew..." && brew install $name)
+  fi
+}
+
+function brew_command {
+  info "run brew $1 ..." && brew $1
+}
+
+info "installing homebrew..."
+if command -v brew >/dev/null 2>&1; then
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew_command update
+  brew_command doctor
+  brew_command prune
+  brew_command cleanup
+fi
 
 formulae=(
   ansible
@@ -19,29 +49,29 @@ formulae=(
   ghq
   go
   gpg-agent
-  graphviz
+  graphviz,neato
   heroku
-  libxml2
+  libxml2,xmllint
   libxslt
   mecab
-  mongodb
+  mongodb,mongod
   mysql56
   nginx
-  neovim
+  neovim,nvim
   nkf
   node
   openssl
   peco
   phantomjs
   pinentry-mac
-  phstgresql
+  postgresql,psql
   pyenv
   r
   rbenv
   readline
-  redis
+  redis,redis-server
   ruby-build
-  sqlite
+  sqlite,sqlite3
   tig
   tmux
   yarn
@@ -50,8 +80,7 @@ formulae=(
   zsh-completions
 )
 
-echo "start brew install..."
+info "start brew install..."
 for formula in "${formulae[@]}"; do
-    brew install $formula || brew upgrade $formula
+  install_brew `echo $formula | sed 's/,/ /'`
 done
-
