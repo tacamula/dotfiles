@@ -1,17 +1,31 @@
-## zplug
-## https://github.com/zplug/zplug/blob/master/doc/guide/ja/README.md
-#export ZPLUG_HOME=/usr/local/opt/zplug
-#source $ZPLUG_HOME/init.zsh
-#zplug "soimort/translate-shell"
+
 #
-#if ! zplug check --verbose; then
+# zplug
+#
+
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
+zplug "sorin-ionescu/prezto"
+# zplug "soimort/translate-shell"
+
+# # load zplug plugins
+# if ! zplug check --verbose; then
 #    printf "Install? [y/N]: "
 #    if read -q; then
 #        echo; zplug install
 #    fi
-#fi
+# fi
+# zplug load --verbose
+
 #
-#zplug load --verbose
+# prezto
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
 
 #
 # Zsh
@@ -67,6 +81,8 @@ alias gitrbi="git branch | awk '{ if (NF == 2) print $2 }' | xargs -I % git log 
 alias docstp="docker ps -a | peco | awk '{ print $1; }' | xargs docker stop"
 alias docrmi="docker images | peco | awk '{ print $3 }' | xargs docker rmi"
 
+## misc
+# alias ghcd="cd `ghq list -p | peco`"
 
 #
 # Development
