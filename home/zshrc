@@ -10,14 +10,14 @@ zplug "sorin-ionescu/prezto"
 zplug "zsh-users/zsh-completions"
 # zplug "soimort/translate-shell"
 
-# # load zplug plugins
-# if ! zplug check --verbose; then
-#    printf "Install? [y/N]: "
-#    if read -q; then
-#        echo; zplug install
-#    fi
-# fi
-# zplug load --verbose
+# load zplug plugins
+if ! zplug check --verbose; then
+   printf "Install? [y/N]: "
+   if read -q; then
+       echo; zplug install
+   fi
+fi
+zplug load --verbose
 
 #
 # prezto
