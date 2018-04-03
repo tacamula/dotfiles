@@ -21,6 +21,7 @@ done
 # TODO: link files under 'config'
 
 echo "setup prezto"
+zplug "sorin-ionescu/prezto"
 ln -s /usr/local/opt/zplug/repos/sorin-ionescu/prezto $HOME/.zprezto
 setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
