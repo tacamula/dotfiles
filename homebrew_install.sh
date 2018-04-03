@@ -77,7 +77,6 @@ formulae=(
   yarn
   zplug
   zsh
-  zsh-completions
 )
 
 info "start brew install..."
