@@ -5,12 +5,6 @@
 echo "set zsh as default shell"
 chsh -s $(which zsh)
 
-echo "setup prezto"
-setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done
-
 echo "-- install tmux plugin manager"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
@@ -25,3 +19,10 @@ do
 done
 
 # TODO: link files under 'config'
+
+echo "setup prezto"
+ln -s /usr/local/opt/zplug/repos/sorin-ionescu/prezto $HOME/.zprezto
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
