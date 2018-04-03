@@ -11,7 +11,7 @@
 	smudge = git-lfs smudge %f
 	required = true
 [commit]
-	template = ~/.stCommitMsg
+	# template = ~/.stCommitMsg
 [ghq]
 	root = ~/src
 [merge]

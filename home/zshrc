@@ -110,9 +110,9 @@ export PATH=$GOPATH/bin:$PATH
 PGDATA=/usr/local/var/postgres
 
 ## erlang/kerl, elixir/exenv
-. /usr/local/kerl/19.3/activate
-export PATH="$HOME/.exenv/bin:$PATH"
-eval "$(exenv init -)"
+# . /usr/local/kerl/19.3/activate
+# export PATH="$HOME/.exenv/bin:$PATH"
+# eval "$(exenv init -)"
 
 ## mysql
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
