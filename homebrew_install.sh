@@ -69,6 +69,7 @@ formulae=(
   r
   rbenv
   readline
+  reattach-to-user-namespace
   redis,redis-server
   ruby-build
   sqlite,sqlite3
