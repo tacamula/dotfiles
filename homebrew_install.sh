@@ -51,6 +51,7 @@ formulae=(
   gpg-agent
   graphviz,neato
   heroku
+  imagemagick@6
   libxml2,xmllint
   libxslt
   mecab

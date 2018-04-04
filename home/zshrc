@@ -126,3 +126,4 @@ export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 
 # read bashrc(must be in bottom)
 test -r ~/.bashrc && . ~/.bashrc
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
