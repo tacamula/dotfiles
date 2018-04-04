@@ -49,6 +49,9 @@ zstyle ':completion:*' recent-dirs-insert both
 ## cancel ignore "echo -n"
 unsetopt promptcr
 
+## do not kill zsh with Ctrl+d
+setopt ignore_eof
+
 #
 # System
 #
@@ -85,6 +88,7 @@ alias docstp="docker ps -a | peco | awk '{ print $1; }' | xargs docker stop"
 alias docrmi="docker images | peco | awk '{ print $3 }' | xargs docker rmi"
 
 ## misc
+alias killselect="ps aux | peco | awk '{ print $2 }' | xargs kill"
 # alias ghcd="cd `ghq list -p | peco`"
 
 #
