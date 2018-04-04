@@ -18,6 +18,12 @@ do
     ln -s $file $HOME/.$(basename $file)
 done
 
+echo "-- link .config"
+
+# karabiner element https://github.com/tekezo/Karabiner-Elements
+rm -rf ~/.config/karabiner/assets
+ln -s $PWD/home/config/karabiner/assets ~/.config/karabiner/assets
+
 # TODO: link files under 'config'
 
 echo "setup prezto"
