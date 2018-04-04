@@ -25,9 +25,9 @@ rm -rf ~/.config/karabiner/assets
 ln -s $PWD/home/config/karabiner/assets ~/.config/karabiner/assets
 
 # mysql config
-#   assume install mysql5.6.37 via homebrew
-rm -rf /usr/local/Cellar/mysql@5.6/5.6.37/my.cnf
-ln -s $PWD/etc/mysql56/5.6.37/my.cnf /usr/local/Cellar/mysql@5.6/5.6.37/
+#   assume install mysql5.6.39 via homebrew
+rm -rf /usr/local/Cellar/mysql@5.6/5.6.39/my.cnf
+ln -s $PWD/etc/mysql56/my.cnf /usr/local/Cellar/mysql@5.6/5.6.39/
 
 # TODO: link files under 'config'
 
