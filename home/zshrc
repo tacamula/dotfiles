@@ -32,8 +32,10 @@ fi
 # Zsh
 #
 
-## history search
+## history
 setopt interactivecomments
+setopt inc_append_history
+setopt share_history
 bindkey '^R' history-incremental-pattern-search-backward
 bindkey '^S' history-incremental-pattern-search-forward
 
