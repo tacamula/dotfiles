@@ -87,6 +87,11 @@ alias gitrbi="git branch | awk '{ if (NF == 2) print $2 }' | xargs -I % git log 
 alias docstp="docker ps -a | peco | awk '{ print $1; }' | xargs docker stop"
 alias docrmi="docker images | peco | awk '{ print $3 }' | xargs docker rmi"
 
+## rails 
+alias migdown="ls -r db/migrate | peco | sed 's/_.*//' | xargs -I % rake db:migrate:down VERSION=%"
+alias grepmigdown="find db/migrate -name '*.rb' | xargs grep '' | peco --initial-filter Regexp | sed 's/db\/migrate\///' | sed 's/_.*//' | xargs -I % rake db:migrate:down VERSION=%"
+alias raketasks="rake -T | peco | awk '{ print $2 }' | xargs rake"
+
 ## misc
 alias killselect="ps aux | peco | awk '{ print $2 }' | xargs kill"
 # alias ghcd="cd `ghq list -p | peco`"
