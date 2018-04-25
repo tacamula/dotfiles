@@ -1,17 +1,3 @@
-NoColor='\033[0m'
-Green='\033[0;32m'
-Yellow='\033[0;33m'
-Red='\033[0;31m'
-
-
-function info {
-  echo "${Green}[I] $1${NoColor}"
-}
-
-function warn {
-  echo "${Yellow}[W] $1${NoColor}"
-}
-
 function install_brew {
   if [ $# -eq 2 ]; then
     name=$1
@@ -22,24 +8,15 @@ function install_brew {
   fi
 
   if command -v $command > /dev/null  2>&1; then
-    info "$name found..."
+    print_info "$name found..."
   else
-    (warn "$name not found, installing via homebrew..." && brew install $name)
+    (print_warn "$name not found, installing via homebrew..." && brew install $name)
   fi
 }
 
 function brew_command {
-  info "run brew $1 ..." && brew $1
+  print_info "run brew $1 ..." && brew $1
 }
-
-info "installing homebrew..."
-if command -v brew >/dev/null 2>&1; then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  brew_command update
-  brew_command doctor
-  brew_command prune
-  brew_command cleanup
-fi
 
 formulae=(
   ansible
@@ -81,7 +58,20 @@ formulae=(
   zsh
 )
 
-info "start brew install..."
-for formula in "${formulae[@]}"; do
-  install_brew `echo $formula | sed 's/,/ /'`
-done
+function install_with_homebrew {
+  print_info "installing homebrew..."
+  if command -v brew >/dev/null 2>&1; then
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    brew_command update
+    brew_command doctor
+    brew_command prune
+    brew_command cleanup
+  fi
+
+  print_info "start brew install..."
+  for formula in "${formulae[@]}"; do
+    install_brew `echo $formula | sed 's/,/ /'`
+  done
+
+  brew cask install ngrok
+}

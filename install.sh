@@ -1,24 +1,27 @@
 #!/bin/bash
 
+# load functions
+source ./functions/colored_print
+
 # TODO: call homebrew_install
 
-echo "set zsh as default shell"
+print_info "set zsh as default shell"
 chsh -s $(which zsh)
 
-echo "-- install tmux plugin manager"
+print_info "-- install tmux plugin manager"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-echo "-- link dotfiles"
+print_info "-- link dotfiles"
 for file in $PWD/home/*
 do
     [[ "$file" =~ .+/\.git ]] && continue
     [[ "$file" =~ .+/\.DS_Store ]] && continue
 
-    echo "link $file to $HOME/$(basename $file)"
+    print_info "link $file to $HOME/$(basename $file)"
     ln -s $file $HOME/.$(basename $file)
 done
 
-echo "-- link .config"
+print_info "-- link .config"
 
 # karabiner element https://github.com/tekezo/Karabiner-Elements
 rm -rf ~/.config/karabiner/assets
@@ -31,7 +34,7 @@ ln -s $PWD/etc/mysql56/my.cnf /usr/local/Cellar/mysql@5.6/5.6.39/
 
 # TODO: link files under 'config'
 
-echo "setup prezto"
+print_info "setup prezto"
 zplug "sorin-ionescu/prezto"
 ln -s /usr/local/opt/zplug/repos/sorin-ionescu/prezto $HOME/.zprezto
 setopt EXTENDED_GLOB
