@@ -1,0 +1,6 @@
+# 
+# new line with sed
+# https://qiita.com/richmikan@github/items/3c74212b0d8dec9bd00f
+# 
+LF=$(printf '\\\012_')
+LF=${LF%_}
