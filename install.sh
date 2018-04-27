@@ -23,6 +23,11 @@ done
 
 print_info "-- link .config"
 
+# git config
+mkdir ~/.config/git
+ln -s $PWD/home/config/git ~/.config
+chmod -x ~/.config/git/hooks/*
+
 # karabiner element https://github.com/tekezo/Karabiner-Elements
 rm -rf ~/.config/karabiner/assets
 ln -s $PWD/home/config/karabiner/assets ~/.config/karabiner/assets

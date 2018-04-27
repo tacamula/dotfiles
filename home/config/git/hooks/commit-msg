@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+def mark_wip(message)
+   "[WIP] #{ message[3..-1] }"
+end
+
+message_file = ARGV[0]
+message = File.read(message_file, encoding: Encoding::UTF_8)
+
+new_message = message.start_with?('-w ') ? mark_wip(message) : message
+File.write(message_file, new_message)
