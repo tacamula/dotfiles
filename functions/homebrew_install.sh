@@ -61,11 +61,12 @@ formulae=(
 function install_with_homebrew {
   print_info "installing homebrew..."
   if command -v brew >/dev/null 2>&1; then
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     brew_command update
     brew_command doctor
     brew_command prune
     brew_command cleanup
+  else
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   fi
 
   print_info "start brew install..."
