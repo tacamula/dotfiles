@@ -23,6 +23,9 @@ done
 
 print_info "-- link .config"
 
+print_info "-- load zshrc"
+source ~/.zshrc
+
 # git config
 mkdir ~/.config/git
 ln -s $PWD/home/config/git ~/.config
