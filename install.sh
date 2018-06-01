@@ -4,6 +4,8 @@
 source ./functions/colored_print
 
 # TODO: call homebrew_install
+source ./functions/homebrew_install.sh
+install_with_homebrew
 
 print_info "set zsh as default shell"
 chsh -s $(which zsh)
