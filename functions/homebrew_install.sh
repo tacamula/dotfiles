@@ -29,15 +29,16 @@ formulae=(
   graphviz,neato
   heroku
   imagemagick@6
+  jenv
   libxml2,xmllint
   libxslt
   mecab
   mongodb,mongod
   mysql56
-  nginx
   neovim,nvim
+  nginx
   nkf
-  node
+  nodebrew
   openssl
   peco
   phantomjs
@@ -74,5 +75,7 @@ function install_with_homebrew {
     install_brew `echo $formula | sed 's/,/ /'`
   done
 
+  brew tap caskroom/versions
   brew cask install ngrok
+  brew cask install java8
 }

@@ -113,6 +113,14 @@ export PATH="/usr/local/opt/libxml2/bin:$PATH"
 ## node
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+## java
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+## android
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+
 ## go
 export GOPATH=~/
 export PATH=$GOPATH/bin:$PATH
