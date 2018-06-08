@@ -82,12 +82,13 @@ alias gitdm="git branch --merged development | grep -vE '^(\*.+)|(master|develop
 alias gitblg="git branch | awk '{ if (NF == 2) print $2 }' | xargs -I % git log --oneline --first-parent %"
 alias gitcp="git log --oneline --branches | peco | awk '{print $1}' | xargs git cherry-pick"
 alias gitrbi="git branch | awk '{ if (NF == 2) print $2 }' | xargs -I % git log --oneline --first-parent % | peco | awk '{ print $1; }' | xargs -o git rebase -i"
+alias gitchrem="git branch --remotes | grep -v '\->' | peco | sed 's/origin\///' | xargs git checkout"
 
 ## docker
 alias docstp="docker ps -a | peco | awk '{ print $1; }' | xargs docker stop"
 alias docrmi="docker images | peco | awk '{ print $3 }' | xargs docker rmi"
 
-## rails 
+## rails
 alias migdown="ls -r db/migrate | peco | sed 's/_.*//' | xargs -I % rake db:migrate:down VERSION=%"
 alias grepmigdown="find db/migrate -name '*.rb' | xargs grep '' | peco --initial-filter Regexp | sed 's/db\/migrate\///' | sed 's/_.*//' | xargs -I % rake db:migrate:down VERSION=%"
 alias raketasks="rake -T | peco | awk '{ print $2 }' | xargs rake"
@@ -113,12 +114,9 @@ export PATH="/usr/local/opt/libxml2/bin:$PATH"
 ## node
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
-## java
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-
 ## android
 export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 
 ## go
@@ -141,6 +139,9 @@ export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [[ -f /Users/m1007/.nodebrew/node/v6.9.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/m1007/.nodebrew/node/v6.9.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
 
+## imagemagic
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+
 # read bashrc(must be in bottom)
 test -r ~/.bashrc && . ~/.bashrc
-export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+
