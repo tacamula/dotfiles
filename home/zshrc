@@ -52,6 +52,11 @@ unsetopt promptcr
 ## do not kill zsh with Ctrl+d
 setopt ignore_eof
 
+## git autocomplete
+__git_files () { 
+    _wanted files expl 'local files' _files     
+}
+
 #
 # System
 #
