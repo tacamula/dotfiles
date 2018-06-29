@@ -28,22 +28,19 @@ print_info "-- link .config"
 print_info "-- load zshrc"
 source ~/.zshrc
 
-# git config
-mkdir ~/.config/git
-ln -s $PWD/home/config/git ~/.config
-chmod -x ~/.config/git/hooks/*
+# config dir
+mkdir ~/.config
+ln -s $PWD/home/config ~/.config
 
-# karabiner element https://github.com/tekezo/Karabiner-Elements
-rm -rf ~/.config/karabiner/assets
-ln -s $PWD/home/config/karabiner/assets ~/.config/karabiner/assets
+# git config
+chmod -x ~/.config/git/hooks/*
 
 # mysql config
 #   assume install mysql5.6.39 via homebrew
 rm -rf /usr/local/Cellar/mysql@5.6/5.6.39/my.cnf
 ln -s $PWD/etc/mysql56/my.cnf /usr/local/Cellar/mysql@5.6/5.6.39/
 
-# TODO: link files under 'config'
-
+# prezto
 print_info "setup prezto"
 zplug "sorin-ionescu/prezto"
 ln -s /usr/local/opt/zplug/repos/sorin-ionescu/prezto $HOME/.zprezto
