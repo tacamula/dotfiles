@@ -54,8 +54,8 @@ unsetopt promptcr
 setopt ignore_eof
 
 ## git autocomplete
-__git_files () { 
-    _wanted files expl 'local files' _files     
+__git_files () {
+    _wanted files expl 'local files' _files
 }
 
 #
