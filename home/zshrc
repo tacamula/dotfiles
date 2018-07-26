@@ -9,6 +9,7 @@ source $ZPLUG_HOME/init.zsh
 zplug "sorin-ionescu/prezto"
 zplug "zsh-users/zsh-completions"
 # zplug "soimort/translate-shell"
+zplug "lukechilds/zsh-better-npm-completion", defer:2
 
 # load zplug plugins
 if ! zplug check --verbose; then
@@ -150,3 +151,5 @@ export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 # read bashrc(must be in bottom)
 test -r ~/.bashrc && . ~/.bashrc
 
+
+export PATH="$HOME/.fastlane/bin:$PATH"

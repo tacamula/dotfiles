@@ -21,11 +21,13 @@ function brew_command {
 formulae=(
   ansible
   chromedriver
+  gauche,goch
   gawk
   gcc
   ghq
   go
   gpg-agent
+  gradle
   graphviz,neato
   heroku
   imagemagick@6
@@ -54,6 +56,7 @@ formulae=(
   sqlite,sqlite3
   tig
   tmux
+  watchman
   yarn
   zplug
   zsh
