@@ -1,0 +1,5 @@
+ghq get https://github.com/Shougo/dein.vim.git
+DEIN_VIM_REPO=$(ghq list --full-path | grep dein.vim)
+mkdir ~/.cache
+sh ${DEIN_VIM_REPO}/bin/installer.sh ~/.cache/dein
+

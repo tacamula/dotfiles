@@ -1,4 +1,5 @@
 " view
+set termguicolors
 set number
 colorscheme desert
 syntax on

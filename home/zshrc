@@ -70,6 +70,7 @@ export TZ=JST-9 # make virus buster scan faster
 
 export EDITOR='vim'
 export VISUAL='vim'
+export XDG_CONFIG_HOME=$HOME/.config
 
 #
 # Alias
