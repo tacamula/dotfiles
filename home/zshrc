@@ -76,7 +76,8 @@ export XDG_CONFIG_HOME=$HOME/.config
 # Alias
 #
 
-alias vi='vim'
+alias vi=nvim
+alias vim=nvim
 
 ## finder
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
