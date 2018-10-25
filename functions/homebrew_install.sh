@@ -81,4 +81,7 @@ function install_with_homebrew {
   brew tap caskroom/versions
   brew cask install ngrok
   brew cask install java8
+
+  brew tap mscharley/homebrew
+  brew install --HEAD alacritty
 }
