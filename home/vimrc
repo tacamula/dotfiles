@@ -59,3 +59,10 @@ set shiftwidth=2
 " ==========================
 inoremap <silent> jj <ESC>
 noremap <silent> っj <ESC>
+nnoremap あ a
+nnoremap い i
+nnoremap う u
+nnoremap お o
+nnoremap っd dd
+nnoremap っy yy
+
