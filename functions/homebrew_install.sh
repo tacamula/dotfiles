@@ -36,7 +36,7 @@ formulae=(
   libxslt
   mecab
   mongodb,mongod
-  mysql56
+  mysql@5.7
   neovim,nvim
   nginx
   nkf
@@ -56,6 +56,7 @@ formulae=(
   sqlite,sqlite3
   tig
   tmux
+  tree
   watchman
   yarn
   zplug
