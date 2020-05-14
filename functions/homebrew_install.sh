@@ -80,9 +80,11 @@ function install_with_homebrew {
   done
 
   brew tap caskroom/versions
+  brew tap heroku/brew
   brew cask install alacritty
   brew cask install ngrok
   brew cask install java8
+  brew cask install google-cloud-sdk
 
   brew tap mscharley/homebrew
 }
