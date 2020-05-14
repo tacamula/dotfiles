@@ -1,6 +1,6 @@
 [core]
 	excludesfile = ~/.config/git/ignore_global
-	hooksPath = ~/.config/git/hooks
+  # hooksPath = ~/.config/git/hooks
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

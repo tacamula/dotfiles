@@ -3,5 +3,6 @@
 .swo
 tmp
 .keep
-.ruby-version
 routes.txt
+.envrc
+
