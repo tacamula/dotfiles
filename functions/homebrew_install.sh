@@ -71,7 +71,7 @@ function install_with_homebrew {
     brew_command prune
     brew_command cleanup
   else
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   fi
 
   print_info "start brew install..."
