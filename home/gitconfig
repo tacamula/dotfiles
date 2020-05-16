@@ -18,5 +18,6 @@
 	root = ~/src
 [merge]
 	tool = opendiff
-[include]
-    path = ~/.gitconfig.local
+[user]
+	email = 4410504+na9amura@users.noreply.github.com
+	name = na9amura
