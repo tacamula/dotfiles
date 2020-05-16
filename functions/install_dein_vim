@@ -1,4 +1,4 @@
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 mkdir ~/.cache
 sh ./installer.sh ~/.cache/dein
-
+rm ./installer.sh
