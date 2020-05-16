@@ -21,6 +21,7 @@ function brew_command {
 formulae=(
   ansible
   chromedriver
+  direnv
   gauche,goch
   gawk
   gcc
