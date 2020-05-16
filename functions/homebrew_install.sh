@@ -27,6 +27,7 @@ formulae=(
   gcc
   ghq
   go
+  gpg
   gpg-agent
   gradle
   graphviz,neato

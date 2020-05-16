@@ -13,6 +13,7 @@
 	required = true
 	process = git-lfs filter-process
 [commit]
+	gpgsign = true
 	# template = ~/.stCommitMsg
 [ghq]
 	root = ~/src
