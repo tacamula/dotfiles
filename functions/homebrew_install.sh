@@ -85,6 +85,7 @@ function install_with_homebrew {
   brew cask install ngrok
   brew cask install java8
   brew cask install google-cloud-sdk
+  brew cask install karabiner-elements
 
   brew tap mscharley/homebrew
 }
