@@ -32,6 +32,7 @@ formulae=(
   heroku
   imagemagick@6
   jenv
+  jq
   libxml2,xmllint
   libxslt
   mecab
