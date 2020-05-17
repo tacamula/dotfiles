@@ -1,0 +1,73 @@
+{
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "files.trimTrailingWhitespace": true,
+    "[javascript]": {
+        "editor.formatOnSave": true
+    },
+    "[typescript]": {
+        "editor.formatOnSave": true
+    },
+    "[typescriptreact]": {
+        "editor.formatOnSave": true
+    },
+    // "local-history.path": "/Users/ta.nakamura/.vscode/",
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j","j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.searchHighlightColor": "rgba(255, 255, 4, 0.5)",
+    "files.exclude": {
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.hg": true,
+        "**/.svn": true,
+        "**/bower_components": true,
+        "**/CVS": true,
+        "**/dist": true,
+        "**/tmp": true
+    },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        "**/vendor/**": true,
+        "assets/**": true,
+        "backup/**": true,
+        "bin/**": true,
+        "cache/**": true,
+        "images/**": true,
+        "logs/**": true,
+        "system/**": true,
+        "tmp/**": true,
+        "webserver-configs/**": true
+    },
+    "editor.minimap.enabled": false,
+    "eslint.autoFixOnSave": true,
+    "editor.tabSize": 2,
+    "window.zoomLevel": 0,
+    "liveshare.featureSet": "insiders",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "editor.renderControlCharacters": true,
+    "importSorter.generalConfiguration.sortOnBeforeSave": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "vsnotes.defaultNotePath": "/Users/ta.nakamura/Documents/vsnotes",
+    "search.searchOnType": false,
+    "importSorter.importStringConfiguration.hasSemicolon": false,
+    "ruby.intellisense": "rubyLocate",
+    "ruby.format": "rubocop",
+    "ruby.interpreter.commandPath": "/Users/ta.nakamura/.rbenv/shims/ruby",
+    "ruby.pathToBundler": "/Users/ta.nakamura/.rbenv/shims/bundle",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+}
