@@ -3,3 +3,5 @@ home/config/AWSVPNClient/*
 home/config/configstore/*
 home/config/gcloud/*
 home/config/karabiner/automatic_backups
+home/gnupg/*
+!home/gnupg/gpg-agent.conf

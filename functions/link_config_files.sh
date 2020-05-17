@@ -18,5 +18,8 @@ function link_config_files {
     # git config
     # chmod -x ~/.config/git/hooks/*
 
+    # link gnupg config
+    ln -s $PWD/home/gnupg ~/.gnupg
+
     print_info "-- link dotfiles"
 }
