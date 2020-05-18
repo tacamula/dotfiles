@@ -5,7 +5,7 @@ source ./functions/colored_print
 
 # homebrew install
 source ./functions/homebrew_install.sh
-install_with_homebrew
+install_homebrew_and_libraries
 
 print_info "set zsh as default shell"
 chsh -s $(which zsh)
