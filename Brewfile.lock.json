@@ -653,6 +653,18 @@
         "options": {
           "full_name": "ngrok"
         }
+      },
+      "notion": {
+        "version": "2.0.7",
+        "options": {
+          "full_name": "notion"
+        }
+      },
+      "docker": {
+        "version": "2.3.0.2,45183",
+        "options": {
+          "full_name": "docker"
+        }
       }
     }
   },
