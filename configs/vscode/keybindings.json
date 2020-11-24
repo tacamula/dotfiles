@@ -30,5 +30,15 @@
     {
         "key": "ctrl+r",
         "command": "-workbench.action.tasks.reRunTask"
+    },
+    {
+        "key": "shift+cmd+v",
+        "command": "-markdown.showPreview",
+        "when": "editorLangId == 'markdown'"
+    },
+    {
+        "key": "shift+cmd+v",
+        "command": "-notebook.cell.pasteAbove",
+        "when": "notebookEditorFocused && !inputFocus"
     }
 ]

@@ -2,7 +2,8 @@
     "terminal.integrated.shell.osx": "/bin/zsh",
     "files.trimTrailingWhitespace": true,
     "[javascript]": {
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[typescript]": {
         "editor.formatOnSave": true
@@ -26,7 +27,6 @@
         "**/.svn": true,
         "**/bower_components": true,
         "**/CVS": true,
-        "**/dist": true,
         "**/tmp": true
     },
     "files.watcherExclude": {
@@ -70,4 +70,9 @@
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
+    "tabnine.experimentalAutoImports": true,
+    "cSpell.userWords": [
+        "typeclass"
+    ],
+    "diffEditor.renderSideBySide": true,
 }
