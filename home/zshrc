@@ -148,9 +148,9 @@ PGDATA=/usr/local/var/postgres
 
 ## mysql
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-# export LDFLAGS="-L/usr/local/opt/mysql@5.7/lib"
-# export CPPFLAGS="-I/usr/local/opt/mysql@5.7/include"
-# export PKG_CONFIG_PATH="/usr/local/opt/mysql@5.7/lib/pkgconfig"
+export LDFLAGS="-L/usr/local/opt/mysql@5.7/lib"
+export CPPFLAGS="-I/usr/local/opt/mysql@5.7/include"
+export PKG_CONFIG_PATH="/usr/local/opt/mysql@5.7/lib/pkgconfig"
 
 ## imagemagic
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
@@ -178,7 +178,7 @@ HEROKU_AC_ZSH_SETUP_PATH=/Users/ta.nakamura/Library/Caches/heroku/autocomplete/z
 # export LDFLAGS="$LDFLAGS -L/usr/local/opt/readline/lib"
 # export CPPFLAGS="$CPPFLAGS -I/usr/local/opt/readline/include"
 # export PKG_CONFIG_PATH="$PKG_CONFIG_PATH /usr/local/opt/readline/lib/pkgconfig"
-# 
+#
 # export LDFLAGS="$LDFLAGS -L/usr/local/opt/openssl/lib"
 # export CPPFLAGS="$CPPFLAGS -I/usr/local/opt/openssl/include"
 # export PKG_CONFIG_PATH="$PKG_CONFIG_PATH /usr/local/opt/openssl/lib/pkgconfig"
