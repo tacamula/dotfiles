@@ -1,0 +1,26 @@
+GEM
+  specs:
+    bond (0.5.1)
+    data_uri (0.1.0)
+    ffi (1.13.1)
+    ffi-rzmq (2.0.7)
+      ffi-rzmq-core (>= 1.0.7)
+    ffi-rzmq-core (1.0.7)
+      ffi
+    iruby (0.4.0)
+      bond (~> 0.5)
+      data_uri (~> 0.1)
+      mimemagic (~> 0.3)
+      multi_json (~> 1.11)
+    mimemagic (0.3.5)
+    multi_json (1.15.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  ffi-rzmq
+  iruby
+
+BUNDLED WITH
+   1.17.2

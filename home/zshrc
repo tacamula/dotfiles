@@ -115,6 +115,9 @@ alias killselect="ps aux | peco | awk '{ print $2 }' | xargs kill"
 ## direnv
 eval "$(direnv hook zsh)"
 
+# ihaskell
+export PATH="$HOME/.local/bin:$PATH"
+
 ## rbenv
 eval "$(rbenv init -)"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
@@ -166,6 +169,8 @@ export PATH="$MODDABLE/build/bin/mac/release:$PATH"
 export GCLOUD_HOME="/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/"
 export PATH="$GCLOUD_HOME/completion.zsh.inc:$GCLOUD_HOME/path.zsh.inc:$PATH"
 
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
