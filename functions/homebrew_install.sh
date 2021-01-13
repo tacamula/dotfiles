@@ -11,4 +11,6 @@ function install_homebrew_and_libraries {
 
   print_info "start brew install..."
   brew bundle
+
+  # sudo ln -sfn $(brew --prefix)/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 }
