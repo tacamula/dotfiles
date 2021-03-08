@@ -41,6 +41,7 @@ brew "tree"
 brew "watchman"
 brew "yarn"
 brew "zplug"
+brew "rcmdnk/file/brew-file"
 
 cask "alfred"
 cask "docker"
@@ -54,6 +55,7 @@ cask "skitch"
 # jupyter
 brew "automake"
 brew "cairo"
+brew "cmake"
 brew "czmq", args: ["HEAD"]
 brew "gmp"
 brew "haskell-stack"

@@ -112,6 +112,11 @@ alias killselect="ps aux | peco | awk '{ print $2 }' | xargs kill"
 # Development
 #
 
+## homebrew
+if [ -f $(brew --prefix)/etc/brew-wrap ];then
+  source $(brew --prefix)/etc/brew-wrap
+fi
+
 ## direnv
 eval "$(direnv hook zsh)"
 
