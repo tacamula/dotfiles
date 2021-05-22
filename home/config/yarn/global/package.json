@@ -10,7 +10,6 @@
     "imagemin-optipng": "^7.1.0",
     "imagemin-pngquant": "^8.0.0",
     "imagemin-svgo": "^7.1.0",
-    "npm-check-updates": "^6.0.1",
     "serve": "^11.3.0",
     "serverless": "^1.71.1"
   }
